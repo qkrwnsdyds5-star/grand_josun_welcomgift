@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="busan">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>JOSUN ÉCLAT | 조선 에끌라 프리미엄 웰컴기프트</title>
+  
+  <!-- SEO & 메타 정보 -->
+  <meta name="description" content="그랜드 조선 호텔과 베키아에누보가 전하는 특별한 환대, JOSUN ÉCLAT(조선 에끌라) 프리미엄 웰컴기프트 디지털 가이드입니다.">
+  <meta name="keywords" content="그랜드 조선, 베키아에누보, 조선 에끌라, JOSUN ECLAT, 웰컴기프트, 쿠키 아틀리에">
+  
+  <!-- Google Fonts: Cormorant Garamond (럭셔리 세리프) & Noto Serif KR & Noto Sans KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- 스타일시트 (상대 경로) -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- ========================================================== -->
+  <!-- 00. GLOBAL HEADER (Sticky Minimal Header)                 -->
+  <!-- ========================================================== -->
+  <header class="global-header" id="globalHeader">
+    <div class="header-inner">
+      <a href="#welcome" class="brand-link" aria-label="JOSUN ÉCLAT 홈">
+        <span class="brand-name">JOSUN ÉCLAT</span>
+        <span class="hotel-name" id="headerHotelName">GRAND JOSUN BUSAN</span>
+      </a>
+      
+      <!-- 지역 퀵 스위처 (URL ?location=busan | jeju 동기화) -->
+      <nav class="location-switcher" aria-label="지역 선택">
+        <button type="button" class="switch-btn active" data-location="busan" id="btnBusan" aria-pressed="true">
+          BUSAN
+        </button>
+        <span class="switcher-divider">/</span>
+        <button type="button" class="switch-btn" data-location="jeju" id="btnJeju" aria-pressed="false">
+          JEJU
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 메인 콘텐츠 영역 -->
+  <main class="page-container">
+
+    <!-- ========================================================== -->
+    <!-- SECTION 01. Welcome (Hero)                                -->
+    <!-- ========================================================== -->
+    <section class="section hero-section" id="welcome">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <!-- 브랜드 로고 심볼 -->
+        <div class="hero-logo-wrap fade-in-up">
+          <img src="./images/josun-eclat-logo.png" alt="JOSUN ÉCLAT GRAND JOSUN 로고" class="hero-logo-img">
+        </div>
+
+        <div class="hero-badge fade-in-up delay-1">
+          <span class="badge-dot"></span>
+          <span class="badge-text" id="heroBadgeText">GRAND JOSUN BUSAN WELCOME GIFT</span>
+        </div>
+
+        <h1 class="hero-title fade-in-up delay-2">
+          여행의 순간을 담은<br>
+          <span class="title-highlight">작은 선물</span>
+        </h1>
+
+        <p class="hero-subtitle fade-in-up delay-3" id="heroSubtitle">
+          푸른 해운대의 파도와 빛나는 도시가 머무는 곳, 그랜드 조선 부산에서 준비한 감각적인 환대의 시간을 마주해 보세요.
+        </p>
+
+        <!-- 패키지 대표 비주얼 -->
+        <div class="hero-visual-card fade-in-up delay-4">
+          <div class="visual-frame">
+            <img src="./images/busan-brochure.png" alt="조선 에끌라 웰컴기프트 패키지" class="hero-packaging-img" id="heroPackagingImg">
+          </div>
+          <div class="visual-caption">
+            <span class="caption-tag">COLLECTION ÉCLAT</span>
+            <span class="caption-text" id="heroCaptionText">그랜드 조선 부산 시그니처 웰컴 패키지</span>
+          </div>
+        </div>
+
+        <!-- 스크롤 다운 가이드 -->
+        <a href="#ourGift" class="scroll-indicator" aria-label="선물 구성 보기">
+          <span class="scroll-text">DISCOVER MORE</span>
+          <span class="scroll-line"></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 02. Our Gift (객실별 기프트 소개)                 -->
+    <!-- ========================================================== -->
+    <section class="section gift-section" id="ourGift">
+      <div class="section-header fade-in-up">
+        <span class="section-eyebrow">CURATED HOSPITALITY</span>
+        <h2 class="section-title">Our Signature Gift</h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">
+          머무시는 공간의 품격에 맞추어 정성스럽게 빚어낸 조선 에끌라의 웰컴 셀렉션입니다.
+        </p>
+      </div>
+
+      <!-- 객실 유형 선택 탭 -->
+      <div class="room-tabs fade-in-up delay-1" role="tablist" aria-label="객실 유형">
+        <button type="button" class="tab-btn active" role="tab" id="tabStandard" aria-selected="true" aria-controls="giftCard" data-room="standard">
+          일반 객실
+        </button>
+        <button type="button" class="tab-btn" role="tab" id="tabSuite" aria-selected="false" aria-controls="giftCard" data-room="suite">
+          스위트 객실
+        </button>
+        <button type="button" class="tab-btn" role="tab" id="tabKids" aria-selected="false" aria-controls="giftCard" data-room="kids">
+          키즈 객실
+        </button>
+      </div>
+
+      <!-- 상품 상세 카드 (JS로 동적 교체) -->
+      <article class="gift-card fade-in-up delay-2" id="giftCard" role="tabpanel" aria-labelledby="tabStandard">
+        <div class="gift-image-wrap">
+          <span class="gift-badge" id="giftBadge">SIGNATURE GOURMET</span>
+          <img src="./images/busan-gift-standard.png" alt="웰컴기프트 상세" class="gift-img" id="giftImg">
+        </div>
+
+        <div class="gift-details">
+          <div class="gift-head">
+            <span class="gift-room-tag" id="giftRoomTag">STANDARD ROOM</span>
+            <h3 class="gift-title-ko" id="giftTitleKo">해운대 시그니처 디저트 세트</h3>
+            <p class="gift-title-en" id="giftTitleEn">The Ocean Landmark Selection</p>
+          </div>
+
+          <p class="gift-description" id="giftDescription">
+            부산의 랜드마크인 광안대교의 유려한 실루엣과 바다를 밝히는 등대, 항해하는 배의 상징을 미니멀하게 형상화한 시그니처 디저트 세트입니다.
+          </p>
+
+          <div class="gift-motif-box">
+            <h4 class="motif-title">REGIONAL MOTIF</h4>
+            <ul class="motif-list" id="giftMotifList">
+              <li><span class="motif-icon">◆</span> <strong>광안대교</strong> : 유려한 현수교의 야경과 낭만</li>
+              <li><span class="motif-icon">◆</span> <strong>배</strong> : 푸른 바다를 향한 새로운 여정</li>
+              <li><span class="motif-icon">◆</span> <strong>등대</strong> : 해운대 앞바다의 따뜻한 길잡이</li>
+            </ul>
+          </div>
+
+          <div class="gift-pairing">
+            <span class="pairing-label">PAIRING NOTE</span>
+            <p class="pairing-text" id="giftPairingText">
+              체크인 직후, 객실 내 은은한 웰컴 티와 곁들이시면 더욱 풍성한 버터의 풍미와 달콤함을 느끼실 수 있습니다.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 03. Cookie Atelier (키즈 쿠키 가이드)              -->
+    <!-- ========================================================== -->
+    <section class="section atelier-section" id="cookieAtelier">
+      <div class="section-header fade-in-up">
+        <span class="section-eyebrow">FOR OUR LITTLE ARTISTS</span>
+        <h2 class="section-title">Cookie Atelier</h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">
+          아이의 상상력이 자유롭게 피어나는 시간.<br>
+          동일한 기본 실루엣의 쿠키 캔버스 위에 우리 가족만의 특별한 이야기를 그려보세요.
+        </p>
+      </div>
+
+      <!-- 쿠키 키트 대표 뷰 -->
+      <div class="atelier-kit-preview fade-in-up delay-1">
+        <div class="kit-image-frame">
+          <img src="./images/kids-cookie-kit.png" alt="조선 에끌라 키즈 쿠키 아틀리에 키트" class="kit-img">
+          <div class="kit-spec-tag">
+            <span>순수한 캔버스 쿠키 6ea</span>
+            <span class="dot">·</span>
+            <span>다채로운 세이프티 초코펜</span>
+            <span class="dot">·</span>
+            <span>데코 토핑 3종</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4-Step 인터랙티브 스텝퍼 -->
+      <div class="stepper-container fade-in-up delay-2">
+        <!-- 스텝 네비게이션 탭 -->
+        <div class="stepper-nav" role="tablist" aria-label="쿠키 만들기 단계">
+          <button type="button" class="step-nav-btn active" data-step="1" role="tab" id="navStep1" aria-selected="true">
+            <span class="num">01</span>
+            <span class="txt">준비하기</span>
+          </button>
+          <button type="button" class="step-nav-btn" data-step="2" role="tab" id="navStep2" aria-selected="false">
+            <span class="num">02</span>
+            <span class="txt">색상 선택</span>
+          </button>
+          <button type="button" class="step-nav-btn" data-step="3" role="tab" id="navStep3" aria-selected="false">
+            <span class="num">03</span>
+            <span class="txt">자유 드로잉</span>
+          </button>
+          <button type="button" class="step-nav-btn" data-step="4" role="tab" id="navStep4" aria-selected="false">
+            <span class="num">04</span>
+            <span class="txt">완성 & 나눔</span>
+          </button>
+        </div>
+
+        <!-- 스텝 상세 내용 뷰어 -->
+        <div class="step-card" id="stepCard" role="tabpanel" aria-labelledby="navStep1">
+          <div class="step-badge" id="stepBadge">STEP 01 / 04</div>
+          <h3 class="step-title" id="stepTitle">정갈한 쿠키 캔버스와 초코펜 준비</h3>
+          <p class="step-desc" id="stepDesc">
+            상자 속 6개의 정갈한 기본 쿠키를 트레이 위에 나란히 정돈합니다. 동봉된 초코펜이 부드럽게 나올 수 있도록 미온수에 살짝 담가 준비해 주세요.
+          </p>
+
+          <div class="curator-tip">
+            <span class="tip-badge">CURATOR'S TIP</span>
+            <p class="tip-content" id="stepTip">
+              초코펜의 앞부분을 가위로 1mm 정도만 얇게 잘라주시면 더욱 섬세하고 정교한 라인 드로잉이 가능합니다.
+            </p>
+          </div>
+
+          <!-- 스텝 이전/다음 컨트롤러 -->
+          <div class="step-controls">
+            <button type="button" class="step-arrow-btn" id="btnPrevStep" aria-label="이전 단계" disabled>
+              ← PREV
+            </button>
+            <div class="step-dots" id="stepDots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <button type="button" class="step-arrow-btn" id="btnNextStep" aria-label="다음 단계">
+              NEXT →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 키즈 브로슈어 안내 카드 -->
+      <div class="atelier-brochure-card fade-in-up delay-3">
+        <div class="brochure-frame">
+          <img src="./images/kids-brochure.png" alt="그랜드 조선 키즈 웰컴기프트 브로슈어" class="brochure-thumb">
+        </div>
+        <div class="brochure-meta">
+          <span class="brochure-tag">FAMILY BROCHURE</span>
+          <h4 class="brochure-title">스마트폰과 함께 즐기는 종이 브로슈어</h4>
+          <p class="brochure-desc">패키지에 동봉된 리플렛을 펼치고 온 가족이 마주 앉아 특별한 디저트 아트를 완성해 보세요.</p>
+        </div>
+      </div>
+
+      <!-- 식품 안전 및 보관 안내 아코디언 -->
+      <div class="accordion-wrap fade-in-up delay-3">
+        <button type="button" class="accordion-btn" id="allergyAccordionBtn" aria-expanded="false" aria-controls="allergyContent">
+          <span class="btn-text">식품 안전 및 보관 유의사항 안내</span>
+          <span class="accordion-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="accordion-content" id="allergyContent" role="region" aria-labelledby="allergyAccordionBtn">
+          <div class="accordion-inner">
+            <div class="info-row">
+              <h4 class="info-label">알레르기 안내</h4>
+              <p class="info-text">
+                본 제품은 밀, 우유, 대두, 계란을 사용하는 제조 시설에서 안전하게 생산되었습니다. 특이 체질이나 알레르기가 있으신 고객께서는 패키지 후면의 상세 표시 라벨을 반드시 확인해 주시기 바랍니다.
+              </p>
+            </div>
+            <div class="info-row">
+              <h4 class="info-label">보관 방법</h4>
+              <p class="info-text">
+                직사광선과 고온다습한 장소를 피해 서늘한 실온에 보관하시기 바라며, 개봉 후에는 풍미 유지를 위해 가급적 빠른 시일 내에 섭취하시길 권장합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 04. Brand Story (브랜드 헤리티지)                  -->
+    <!-- ========================================================== -->
+    <section class="section story-section" id="brandStory">
+      <div class="section-header fade-in-up">
+        <span class="section-eyebrow">HERITAGE & CRAFTSMANSHIP</span>
+        <h2 class="section-title">The Sweetest Welcome</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="story-grid fade-in-up delay-1">
+        <div class="story-card">
+          <span class="story-num">01</span>
+          <h3 class="story-heading">GRAND JOSUN</h3>
+          <p class="story-body">
+            100년 전통의 환대 헤리티지 위에 현대적인 세련미를 더한 그랜드 조선. 머무시는 모든 공간과 찰나의 순간마다 따뜻하고 품격 있는 여정을 선사합니다.
+          </p>
+        </div>
+
+        <div class="story-card">
+          <span class="story-num">02</span>
+          <h3 class="story-heading">VECCHIA & NUOVO</h3>
+          <p class="story-body">
+            2005년부터 신세계푸드가 지켜온 정통 유러피언 파티세리 베키아에누보. 엄선된 최상의 재료와 장인정신으로 빚어낸 깊고 섬세한 미식의 즐거움을 전합니다.
+          </p>
+        </div>
+
+        <div class="story-card highlight-card">
+          <span class="story-num">03</span>
+          <h3 class="story-heading">JOSUN ÉCLAT</h3>
+          <p class="story-body">
+            '찬란한 광채'와 '빛나는 순간'을 뜻하는 프랑스어 Éclat처럼, 여행의 가장 설레는 첫 장을 달콤한 빛으로 채우는 두 브랜드의 특별한 웰컴 셀렉션입니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 05. Local Inspiration (지역 영감)                 -->
+    <!-- ========================================================== -->
+    <section class="section inspiration-section" id="inspiration">
+      <div class="section-header fade-in-up">
+        <span class="section-eyebrow">GENIUS LOCI</span>
+        <h2 class="section-title">Inspired by Nature</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="inspiration-content fade-in-up delay-1">
+        <div class="inspiration-graphic" id="inspirationGraphic">
+          <!-- 파도 / 산 SVG 라인 아트 (JS로 테마별 전환) -->
+          <svg class="line-art" viewBox="0 0 300 100" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path id="svgPath" d="M 0,50 Q 50,20 100,50 T 200,50 T 300,50"></path>
+          </svg>
+        </div>
+
+        <h3 class="inspiration-title" id="inspirationTitle">해운대의 깊은 바다와 수평선</h3>
+        <p class="inspiration-subtitle" id="inspirationSubtitle">The Azure Horizon of Haeundae</p>
+        
+        <p class="inspiration-text" id="inspirationText">
+          끝없이 펼쳐진 에메랄드빛 해운대 해변과 잔잔한 파도의 율동감에서 영감을 받았습니다. 딥 네이비의 깊은 울림과 샴페인 골드의 섬세한 반짝임이 부산에서의 특별한 휴식을 영원히 기억하게 합니다.
+        </p>
+
+        <blockquote class="inspiration-quote" id="inspirationQuote">
+          "파도가 밀려와 백사장에 남기는 고요한 흔적처럼, 여행의 가장 우아한 순간을 웰컴기프트에 담았습니다."
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- SECTION 06. Closing & Footer                              -->
+    <!-- ========================================================== -->
+    <section class="section closing-section" id="closing">
+      <div class="closing-content fade-in-up">
+        <p class="closing-eyebrow">SPECIAL MEMORY FOR FAMILY</p>
+        <h2 class="closing-message">
+          "아이에게는 즐거움을,<br>
+          가족에게는 특별한 추억을"
+        </h2>
+        <p class="closing-submessage">
+          조선 에끌라와 함께하는 여행의 첫 순간이<br>
+          언제나 따뜻하고 빛나는 기억으로 남기를 바랍니다.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 글로벌 푸터 -->
+  <footer class="global-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="footer-brand">JOSUN ÉCLAT</span>
+        <span class="footer-sub">GRAND JOSUN × VECCHIA & NUOVO</span>
+      </div>
+
+      <div class="hotel-locations">
+        <div class="hotel-info-item">
+          <strong>그랜드 조선 부산</strong>
+          <span>부산광역시 해운대구 해운대해변로 292</span>
+          <span>T. 051-922-5000</span>
+        </div>
+        <div class="hotel-info-item">
+          <strong>그랜드 조선 제주</strong>
+          <span>제주특별자치도 서귀포시 중문관광로 72번길 60</span>
+          <span>T. 064-738-6600</span>
+        </div>
+      </div>
+
+      <!-- 프로토타입 고지 안내문 -->
+      <div class="prototype-notice">
+        <p>※ 본 웹페이지는 그랜드 조선 호텔과 베키아에누보의 신규 웰컴기프트 상품 기획안 제안을 위해 제작된 하이파이 프로토타입 웹사이트입니다.</p>
+        <p class="copyright">© 2026 GRAND JOSUN × VECCHIA & NUOVO. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 바닐라 자바스크립트 (상대 경로) -->
+  <script src="./script.js"></script>
+</body>
+</html>
